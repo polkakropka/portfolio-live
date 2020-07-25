@@ -13,9 +13,6 @@ body {
   max-width: 100%;
   margin-top: 0;
   background-image: url("../../assets/images/general/circles-background.jpg"); }
-  @media (min-width: 768px) {
-    .page-wrapper {
-      margin-top: -100px; } }
 
 .fullwidth {
   width: 100%; }
@@ -33,10 +30,16 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../../assets/images/general/border-down.png") repeat-x;
+  background: url("/assets/images/general/border-down.png") repeat-x;
   width: 100%;
   height: 12px;
   z-index: 3; }
+
+::-moz-selection {
+  background-color: #009c83; }
+
+::selection {
+  background-color: #009c83; }
 
 h1 {
   font-size: 2.7rem;
@@ -158,7 +161,8 @@ a {
   font-size: 20px;
   border-radius: 5px;
   border: 1px solid #be324b;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  text-align: center; }
   .btn:hover, .btn:active, .btn:focus {
     color: #be324b;
     background-color: #FFFCFC;
@@ -602,13 +606,14 @@ header.open #burger-menu span:nth-child(6) {
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  padding-top: calc(2 * 60px);
+  padding-top: 100px;
   margin-bottom: 60px; }
   @media (min-width: 992px) {
     .intro {
       flex-direction: row;
-      padding-top: calc(2 * 100px);
-      margin-bottom: 100px;
+      margin-bottom: 100px; } }
+  @media (min-width: 1200px) {
+    .intro {
       height: 100vh; } }
   .intro__image img {
     height: 100%;
@@ -691,7 +696,7 @@ header.open #burger-menu span:nth-child(6) {
         display: flex;
         justify-content: flex-end;
         height: 65px;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0.68) 73%, black 100%); } }
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 6%, black 73%, black 100%); } }
   .header__logo {
     position: relative;
     max-width: 0;
@@ -735,6 +740,7 @@ header.open #burger-menu span:nth-child(6) {
           align-items: center; } }
       .header__menu li a {
         display: inline-block;
+        font-family: "OpenSans-Regular", sans-serif;
         color: white;
         transition: all 0.2s;
         text-transform: uppercase;
@@ -862,7 +868,7 @@ footer {
       border-bottom: dotted 1px rgba(197, 197, 196, 0.48); }
   .teaser-triple__item-middle img {
     max-width: 300px;
-    margin: 20px auto 20px auto;
+    margin: 70px auto 20px auto;
     box-shadow: 10px 13px 60px -16px rgba(0, 0, 0, 0.75); }
     @media (min-width: 576px) {
       .teaser-triple__item-middle img {
@@ -886,7 +892,7 @@ footer {
     flex-direction: row;
     justify-content: center; }
     .contact .social-icons__item {
-      background-color: #000;
+      background-color: #2B2D2A;
       padding: 10px;
       margin: 10px;
       border-radius: 4px;
